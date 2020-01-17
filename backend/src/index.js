@@ -2,7 +2,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const routes = require('./routes');
-
+const cors = require('cors');
 
 //iniciando o projeto
 const app = express();
@@ -12,6 +12,9 @@ mongoose.connect('mongodb+srv://kensei:bleach@cluster0-uyus6.mongodb.net/week10?
      useNewUrlParser: true,
      useUnifiedTopology: true 
 });
+
+// utilizando o CORS
+app.use(cors());
 
 // Força o express a utilizar o json.
 app.use(express.json());

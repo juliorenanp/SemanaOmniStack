@@ -48,6 +48,8 @@ module.exports = {
         }
 
         return response.json(dev);
-    }
+    },
+
+    // falta o update e destroy
 };
 
